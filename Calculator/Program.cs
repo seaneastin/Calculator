@@ -19,7 +19,7 @@ namespace Calculator
             bool calculator = true; //states that calculator is on
             while (calculator == true)
             {
-                Console.WriteLine("what operation do you want to do [add,subtract,multiply,division]");
+                Console.WriteLine("what operation do you want to do [add,subtract,multiply,division,quit]");
                 operation = Console.ReadLine();
                 if (operation == "add")
                 {
@@ -56,6 +56,10 @@ namespace Calculator
                     number2 = Convert.ToInt32(Console.ReadLine());
                     answer = number1 / number2;
                     Console.WriteLine(answer);
+                }
+                else if (operation == "quit")
+                {
+                    calculator = false;
                 }
             }
         }
