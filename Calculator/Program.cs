@@ -23,14 +23,35 @@ namespace Calculator
                 operation = Console.ReadLine();
                 if (operation == "add")
                 {
+                    addition();
+                }
+                else if (operation == "subtract")
+                {
+                    subtract();
+                }
+                else if (operation == "multiply")
+                {
+                    multiply();
+                }
+                else if (operation == "division")
+                {
+                    division();
+                }
+                else if (operation == "quit")
+                {
+                    calculator = false;
+                }
+                bool addition()
+                {
                     Console.WriteLine("please input first number");
                     number1 = Convert.ToInt32(Console.ReadLine());
                     Console.WriteLine("please input second number");
                     number2 = Convert.ToInt32(Console.ReadLine());
                     answer = number1 + number2;
                     Console.WriteLine(answer);
+                    return true;
                 }
-                else if (operation == "subtract")
+                bool subtract()
                 {
                     Console.WriteLine("please input first number");
                     number1 = Convert.ToInt32(Console.ReadLine());
@@ -38,8 +59,9 @@ namespace Calculator
                     number2 = Convert.ToInt32(Console.ReadLine());
                     answer = number1 - number2;
                     Console.WriteLine(answer);
+                    return true;
                 }
-                else if (operation == "multiply")
+                bool multiply()
                 {
                     Console.WriteLine("please input first number");
                     number1 = Convert.ToInt32(Console.ReadLine());
@@ -47,8 +69,9 @@ namespace Calculator
                     number2 = Convert.ToInt32(Console.ReadLine());
                     answer = number1 * number2;
                     Console.WriteLine(answer);
+                    return true;
                 }
-                else if (operation == "division") 
+                bool division()
                 {
                     Console.WriteLine("please input first number");
                     number1 = Convert.ToInt32(Console.ReadLine());
@@ -56,10 +79,7 @@ namespace Calculator
                     number2 = Convert.ToInt32(Console.ReadLine());
                     answer = number1 / number2;
                     Console.WriteLine(answer);
-                }
-                else if (operation == "quit")
-                {
-                    calculator = false;
+                    return true;
                 }
             }
         }
